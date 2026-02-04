@@ -9,3 +9,17 @@ function testScope() {
 }
 
 testScope();
+
+//var => function-scoped
+//let, const => block-scoped
+// In general, prefer let and const over var to avoid scope-related issues.
+
+// Example of const
+const PI = 3.14;
+console.log(PI); // 3.14
+// PI = 3.14159; // This will throw an error, as const variables cannot be reassigned
+
+// Example of let
+let count = 0;
+count += 1;
+console.log(count); // 1
