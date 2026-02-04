@@ -1,21 +1,11 @@
-//Using the let keyword to declare a variable
-let name = "John";
-console.log(name); // Output: John
+//Using var and let in terms of scope
+function testScope() {
+    if (true) {
+        var varVariable = "I am a var variable";
+        let letVariable = "I am a let variable";
+    }
+    console.log(varVariable); // This will work, var is function-scoped
+    console.log(letVariable); // This will throw an error, let is block-scoped
+}
 
-//Using the var keyword to declare a variable
-var age = 30;
-console.log(age); // Output: 30
-
-//Using let to declare a variable that can be reassigned
-let city = "New York";
-console.log(city); // Output: New York
-
-city = "Los Angeles";
-console.log(city); // Output: Los Angeles
-
-//Using var to declare a variable that can be reassigned
-var country = "USA";
-console.log(country); // Output: USA
-
-country = "Canada";
-console.log(country); // Output: Canada
+testScope();
